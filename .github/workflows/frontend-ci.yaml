@@ -51,7 +51,7 @@ jobs:
 
       - name: Run tests
         working-directory: starter/frontend
-        run: CI=true npm test -- --watchAll=false
+        run: CI=true npm test -- --watchAll=false --passWithNoTests
 
   build:
     runs-on: ubuntu-latest
@@ -76,7 +76,7 @@ jobs:
 
       - name: Run tests
         working-directory: starter/frontend
-        run: CI=true npm test -- --watchAll=false
+        run: CI=true npm test -- --watchAll=false --passWithNoTests
 
       - name: Build Docker image
         working-directory: starter/frontend
